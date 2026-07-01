@@ -1,8 +1,25 @@
 # Clean Architecture Boilerplate
 
+![CI](https://img.shields.io/badge/CI-GitHub_Actions-2563eb)
+![.NET](https://img.shields.io/badge/.NET-10-512bd4)
+![Architecture](https://img.shields.io/badge/Architecture-Clean-16a34a)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-EF_Core-336791)
+![License](https://img.shields.io/badge/License-MIT-16a34a)
+
 A .NET enterprise API template with Clean Architecture, CQRS, validation, EF Core, JWT authentication, role-based authorization, Swagger, Docker and CI.
 
 The sample domain is intentionally small: delivery projects and project tasks. It gives the architecture enough behavior to be meaningful without turning the repository into a product-specific application.
+
+## Dependency Rule
+
+```mermaid
+flowchart TD
+    Api["API: endpoints, auth, Swagger"] --> Application["Application: CQRS, validators, ports"]
+    Infrastructure["Infrastructure: EF Core, JWT, external services"] --> Application
+    Application --> Domain["Domain: entities and business rules"]
+    Shared["Shared primitives"] --> Domain
+    Api -.composition root.-> Infrastructure
+```
 
 ## Highlights
 
@@ -18,6 +35,13 @@ The sample domain is intentionally small: delivery projects and project tasks. I
 - Docker Compose local stack
 - GitHub Actions CI
 - Unit tests for Domain, Application and Infrastructure behavior
+
+## What This Demonstrates
+
+- Enterprise-ready project template with clear layer boundaries.
+- CQRS handlers, validation pipeline and auditable domain model.
+- Authenticated API surface with role-based authorization and Swagger.
+- Practical template structure that can be reused without exposing client work.
 
 ## Structure
 
