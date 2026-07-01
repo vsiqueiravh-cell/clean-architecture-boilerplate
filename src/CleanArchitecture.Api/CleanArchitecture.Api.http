@@ -1,0 +1,28 @@
+@host = http://localhost:8080
+
+POST {{host}}/api/v1/auth/token
+Content-Type: application/json
+
+{
+  "username": "architect",
+  "password": "ChangeMe123!"
+}
+
+###
+
+@accessToken = paste-token-here
+
+POST {{host}}/api/v1/projects
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "name": "ERP Modernization Platform",
+  "key": "ERP2026",
+  "description": "Reference project used to demonstrate clean application boundaries."
+}
+
+###
+
+GET {{host}}/api/v1/projects?page=1&pageSize=25
+Authorization: Bearer {{accessToken}}

@@ -1,0 +1,11 @@
+.git
+.github
+bin
+obj
+TestResults
+coverage
+artifacts
+docker-data
+*.user
+*.suo
+*.md
