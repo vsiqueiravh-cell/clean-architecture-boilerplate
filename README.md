@@ -1,6 +1,6 @@
 # Clean Architecture Boilerplate
 
-![CI](https://img.shields.io/badge/CI-GitHub_Actions-2563eb)
+[![CI](https://github.com/vsiqueiravh-cell/clean-architecture-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/vsiqueiravh-cell/clean-architecture-boilerplate/actions/workflows/ci.yml)
 ![.NET](https://img.shields.io/badge/.NET-10-512bd4)
 ![Architecture](https://img.shields.io/badge/Architecture-Clean-16a34a)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-EF_Core-336791)
@@ -136,3 +136,15 @@ dotnet test CleanArchitectureBoilerplate.slnx --configuration Release --no-build
 ## Security Notes
 
 The included database credentials, demo user and JWT signing key are local development defaults. Replace them with environment variables or a secret manager before adapting this template to any real environment.
+
+## Author & Contact
+
+Built and maintained by **Victor Henrique de Siqueira**.
+
+- Email: [victor.h.siqueira@hotmail.com](mailto:victor.h.siqueira@hotmail.com)
+- Phone / WhatsApp: [+55 11 94340-3468](tel:+5511943403468)
+- GitHub: [vsiqueiravh-cell](https://github.com/vsiqueiravh-cell)
+
+## Portfolio Notice
+
+This repository is part of a public enterprise software portfolio. The domain, credentials and payloads are fictional and created only to demonstrate architecture, testing and delivery practices.
