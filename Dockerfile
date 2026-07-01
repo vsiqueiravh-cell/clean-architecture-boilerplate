@@ -16,8 +16,7 @@ RUN dotnet restore CleanArchitectureBoilerplate.slnx
 COPY . .
 RUN dotnet publish src/CleanArchitecture.Api/CleanArchitecture.Api.csproj \
     --configuration Release \
-    --output /app/publish \
-    --no-restore
+    --output /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
 WORKDIR /app
